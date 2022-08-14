@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, View, SafeAreaView, Platform, Text} from 'react-native';
+import {ScrollView, View, SafeAreaView, Platform} from 'react-native';
 import {TextField} from 'rn-material-ui-textfield';
 
 let styles = {
@@ -80,7 +80,7 @@ class App extends Component {
 
   onChangeText(text) {
     ['firstname', 'lastname', 'about', 'email', 'password']
-      .map((name) => ({name, ref: this[name]}))
+      .map(name => ({name, ref: this[name]}))
       .forEach(({name, ref}) => {
         if (ref.isFocused()) {
           this.setState({[name]: text});
@@ -117,7 +117,7 @@ class App extends Component {
   onSubmit() {
     let errors = {};
 
-    ['firstname', 'lastname', 'email', 'password'].forEach((name) => {
+    ['firstname', 'lastname', 'email', 'password'].forEach(name => {
       let value = this[name].value();
 
       if (!value) {
@@ -157,7 +157,8 @@ class App extends Component {
         <ScrollView
           style={styles.scroll}
           contentContainerStyle={styles.contentContainer}
-          keyboardShouldPersistTaps="handled">
+          keyboardShouldPersistTaps="handled"
+        >
           <View style={styles.container}>
             <TextField
               ref={this.firstnameRef}
