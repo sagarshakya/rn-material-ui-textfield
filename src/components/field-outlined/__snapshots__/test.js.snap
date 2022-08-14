@@ -170,6 +170,7 @@ exports[`renders 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -453,6 +454,7 @@ exports[`renders accessory 1`] = `
     </View>
     <Image />
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -735,6 +737,7 @@ exports[`renders counter 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1036,6 +1039,7 @@ exports[`renders disabled value 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1318,6 +1322,7 @@ exports[`renders title 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1617,6 +1622,7 @@ exports[`renders value 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",

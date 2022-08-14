@@ -157,8 +157,7 @@ class App extends Component {
         <ScrollView
           style={styles.scroll}
           contentContainerStyle={styles.contentContainer}
-          keyboardShouldPersistTaps="handled"
-        >
+          keyboardShouldPersistTaps="handled">
           <View style={styles.container}>
             <TextField
               ref={this.firstnameRef}

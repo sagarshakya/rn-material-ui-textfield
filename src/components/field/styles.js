@@ -1,4 +1,4 @@
-import { StyleSheet, I18nManager } from 'react-native'
+import { StyleSheet, I18nManager } from 'react-native';
 
 export default StyleSheet.create({
   inputContainer: {
@@ -39,4 +39,4 @@ export default StyleSheet.create({
   flex: {
     flex: 1,
   },
-})
+});
