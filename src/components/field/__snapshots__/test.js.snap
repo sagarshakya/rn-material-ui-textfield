@@ -48,6 +48,7 @@ exports[`renders 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -207,6 +208,7 @@ exports[`renders counter 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -389,6 +391,7 @@ exports[`renders default value 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -548,6 +551,7 @@ exports[`renders disabled value 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -707,6 +711,7 @@ exports[`renders error 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -884,6 +889,7 @@ exports[`renders left accessory 1`] = `
     </View>
     <Image />
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1043,6 +1049,7 @@ exports[`renders multiline value 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1208,6 +1215,7 @@ exports[`renders prefix 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1392,6 +1400,7 @@ exports[`renders restriction 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1574,6 +1583,7 @@ exports[`renders right accessory 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1734,6 +1744,7 @@ exports[`renders suffix 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -1918,6 +1929,7 @@ exports[`renders title 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",
@@ -2094,6 +2106,7 @@ exports[`renders value 1`] = `
       />
     </View>
     <View
+      pointerEvents="auto"
       style={
         Object {
           "alignSelf": "stretch",

@@ -1,11 +1,11 @@
-import { StyleSheet, Platform } from 'react-native'
+import { StyleSheet, Platform } from 'react-native';
 
-export const borderRadius = 4
+export const borderRadius = 4;
 
 let containerStyle = {
   position: 'absolute',
   overflow: 'hidden',
-}
+};
 
 export default StyleSheet.create({
   borderLeft: {
@@ -80,4 +80,4 @@ export default StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     overflow: 'hidden',
   },
-})
+});

@@ -1,9 +1,9 @@
-import 'react-native'
-import React from 'react'
-import { Animated } from 'react-native'
-import renderer from 'react-test-renderer'
+import 'react-native';
+import React from 'react';
+import { Animated } from 'react-native';
+import renderer from 'react-test-renderer';
 
-import Affix from '.'
+import Affix from '.';
 
 /* eslint-env jest */
 
@@ -12,10 +12,10 @@ const props = {
   fontSize: 16,
 
   labelAnimation: new Animated.Value(1),
-}
+};
 
-const prefix = 'a'
-const suffix = 'z'
+const prefix = 'a';
+const suffix = 'z';
 
 it('renders prefix', () => {
   let affix = renderer
@@ -24,10 +24,10 @@ it('renders prefix', () => {
         {prefix}
       </Affix>
     )
-    .toJSON()
+    .toJSON();
 
-  expect(affix).toMatchSnapshot()
-})
+  expect(affix).toMatchSnapshot();
+});
 
 it('renders inactive prefix', () => {
   let affix = renderer
@@ -36,10 +36,10 @@ it('renders inactive prefix', () => {
         {prefix}
       </Affix>
     )
-    .toJSON()
+    .toJSON();
 
-  expect(affix).toMatchSnapshot()
-})
+  expect(affix).toMatchSnapshot();
+});
 
 it('renders suffix', () => {
   let affix = renderer
@@ -48,10 +48,10 @@ it('renders suffix', () => {
         {suffix}
       </Affix>
     )
-    .toJSON()
+    .toJSON();
 
-  expect(affix).toMatchSnapshot()
-})
+  expect(affix).toMatchSnapshot();
+});
 
 it('renders inactive suffix', () => {
   let affix = renderer
@@ -60,7 +60,7 @@ it('renders inactive suffix', () => {
         {suffix}
       </Affix>
     )
-    .toJSON()
+    .toJSON();
 
-  expect(affix).toMatchSnapshot()
-})
+  expect(affix).toMatchSnapshot();
+});
