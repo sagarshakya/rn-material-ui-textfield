@@ -1,14 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import { View, TextInput, Animated, StyleSheet, Platform } from 'react-native';
 import {
-  View,
-  Text,
-  TextInput,
-  Animated,
-  StyleSheet,
-  Platform,
+  TextPropTypes,
   ViewPropTypes,
-} from 'react-native';
+  TextInputPropTypes,
+} from 'deprecated-react-native-prop-types';
 
 import Line from '../line';
 import Label from '../label';
@@ -64,7 +61,7 @@ export default class TextField extends PureComponent {
   };
 
   static propTypes = {
-    ...TextInput.propTypes,
+    ...TextInputPropTypes,
 
     animationDuration: PropTypes.number,
 
@@ -82,9 +79,9 @@ export default class TextField extends PureComponent {
 
     labelOffset: Label.propTypes.offset,
 
-    labelTextStyle: Text.propTypes.style,
-    titleTextStyle: Text.propTypes.style,
-    affixTextStyle: Text.propTypes.style,
+    labelTextStyle: TextPropTypes.style,
+    titleTextStyle: TextPropTypes.style,
+    affixTextStyle: TextPropTypes.style,
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
@@ -115,8 +112,8 @@ export default class TextField extends PureComponent {
     prefix: PropTypes.string,
     suffix: PropTypes.string,
 
-    containerStyle: (ViewPropTypes || View.propTypes).style,
-    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+    containerStyle: ViewPropTypes.style,
+    inputContainerStyle: ViewPropTypes.style,
   };
 
   static inputContainerStyle = styles.inputContainer;
@@ -451,7 +448,7 @@ export default class TextField extends PureComponent {
   inputProps() {
     let store = {};
 
-    for (let key in TextInput.propTypes) {
+    for (let key in TextInputPropTypes) {
       if (key === 'defaultValue') {
         continue;
       }
