@@ -1,3 +1,11 @@
+## [1.0.8](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.7...v1.0.8) (2022-10-30)
+
+
+### Bug Fixes
+
+* Fix `Module parse failed` error on Expo web ([6f0a1b0](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/6f0a1b0))
+
+
 ## [1.0.7](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.6...v1.0.7) (2022-08-14)
 
 
