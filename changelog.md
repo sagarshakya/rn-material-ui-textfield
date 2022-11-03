@@ -1,3 +1,15 @@
+## [1.0.9](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.8...v1.0.9) (2022-11-03)
+
+
+### Features
+
+* Add expo example app with web support ([2bb2cf2](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/2bb2cf221de716d3f08f12ad6de45c560425a1b1))
+
+### Bug Fixes
+
+* Fix `labels` styles for web ([97a03cb](https://github.com/gabrieldonadel/rn-material-ui-textfield/commit/97a03cb))
+
+
 ## [1.0.8](https://github.com/gabrieldonadel/rn-material-ui-textfield/compare/v1.0.7...v1.0.8) (2022-10-30)
 
 
