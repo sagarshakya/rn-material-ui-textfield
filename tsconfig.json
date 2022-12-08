@@ -26,5 +26,5 @@
     "target": "esnext",
     "outDir": "build",
   },
-  "exclude": ["lib/**/*", "example/**/*"]
+  "exclude": ["lib/**/*", "example/**/*",  "expo-example/**/*"]
 }

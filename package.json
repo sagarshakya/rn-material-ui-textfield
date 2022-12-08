@@ -1,6 +1,6 @@
 {
   "name": "rn-material-ui-textfield",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Material UI textfield",
   "keywords": [
     "react",
@@ -94,6 +94,7 @@
   "jest": {
     "modulePathIgnorePatterns": [
       "<rootDir>/example/node_modules",
+      "<rootDir>/expo-example/node_modules",
       "<rootDir>/lib/"
     ],
     "preset": "react-native"
