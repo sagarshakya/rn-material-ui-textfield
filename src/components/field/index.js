@@ -648,7 +648,7 @@ export default class TextField extends PureComponent {
       style: containerStyle,
       onStartShouldSetResponder: () => true,
       onResponderRelease: this.onPress,
-      pointerEvents: !disabled ? 'auto' : 'none',
+      pointerEvents: !disabled && editable ? 'auto' : 'none',
     };
 
     let inputContainerProps = {
