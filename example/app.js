@@ -1,39 +1,17 @@
 import React, {Component} from 'react';
-import {ScrollView, View, SafeAreaView, Platform} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  View,
+  SafeAreaView,
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import {TextField} from 'rn-material-ui-textfield';
 
-let styles = {
-  scroll: {
-    backgroundColor: 'transparent',
-  },
-
-  container: {
-    margin: 8,
-    marginTop: Platform.select({ios: 8, android: 32}),
-    flex: 1,
-  },
-
-  contentContainer: {
-    padding: 8,
-  },
-
-  buttonContainer: {
-    paddingTop: 8,
-    margin: 8,
-  },
-
-  safeContainer: {
-    flex: 1,
-    backgroundColor: '#E8EAF6',
-  },
-};
-
-let defaults = {
-  firstname: 'Eddard',
-  lastname: 'Stark',
-  about:
-    'Stoic, dutiful, and honorable man, considered to embody the values of the North',
-};
+import EyeIcon from './assets/eye.png';
+import InvisibleEyeIcon from './assets/invisible.png';
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +25,6 @@ class App extends Component {
     this.onSubmitAbout = this.onSubmitAbout.bind(this);
     this.onSubmitEmail = this.onSubmitEmail.bind(this);
     this.onSubmitPassword = this.onSubmitPassword.bind(this);
-    this.onAccessoryPress = this.onAccessoryPress.bind(this);
 
     this.firstnameRef = this.updateRef.bind(this, 'firstname');
     this.lastnameRef = this.updateRef.bind(this, 'lastname');
@@ -86,12 +63,6 @@ class App extends Component {
           this.setState({[name]: text});
         }
       });
-  }
-
-  onAccessoryPress() {
-    this.setState(({secureTextEntry}) => ({
-      secureTextEntry: !secureTextEntry,
-    }));
   }
 
   onSubmitFirstName() {
@@ -137,18 +108,27 @@ class App extends Component {
   }
 
   renderPasswordAccessory() {
-    let {secureTextEntry} = this.state;
-
-    let name = secureTextEntry ? 'visibility' : 'visibility-off';
-
-    return null;
+    return (
+      <TouchableOpacity
+        activeOpacity={0.5}
+        onPress={() =>
+          this.setState(({secureTextEntry}) => ({
+            secureTextEntry: !secureTextEntry,
+          }))
+        }>
+        <Image
+          style={styles.passwordAccessory}
+          source={this.state.secureTextEntry ? InvisibleEyeIcon : EyeIcon}
+        />
+      </TouchableOpacity>
+    );
   }
 
   render() {
     let {errors = {}, secureTextEntry, ...data} = this.state;
-    let {firstname, lastname} = data;
+    let {firstname, lastname, about} = data;
 
-    let defaultEmail = `${firstname || 'name'}@${lastname || 'house'}.com`
+    let defaultEmail = `${firstname || 'name'}@${lastname || 'house'}.dev`
       .replace(/\s+/g, '_')
       .toLowerCase();
 
@@ -161,7 +141,7 @@ class App extends Component {
           <View style={styles.container}>
             <TextField
               ref={this.firstnameRef}
-              value={defaults.firstname}
+              value={firstname}
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
               onFocus={this.onFocus}
@@ -174,7 +154,7 @@ class App extends Component {
 
             <TextField
               ref={this.lastnameRef}
-              value={defaults.lastname}
+              value={lastname}
               autoCorrect={false}
               enablesReturnKeyAutomatically={true}
               onFocus={this.onFocus}
@@ -187,7 +167,7 @@ class App extends Component {
 
             <TextField
               ref={this.aboutRef}
-              value={defaults.about}
+              value={about}
               onFocus={this.onFocus}
               onChangeText={this.onChangeText}
               onSubmitEditing={this.onSubmitAbout}
@@ -260,3 +240,37 @@ class App extends Component {
 }
 
 export default App;
+
+const defaults = {
+  firstname: 'Gabriel',
+  lastname: 'Donadel',
+  about:
+    'Brazilian Software Engineer passionate about tinkering and making my ideas become reality',
+};
+
+const styles = StyleSheet.create({
+  scroll: {
+    backgroundColor: 'transparent',
+  },
+  container: {
+    margin: 8,
+    marginTop: Platform.select({ios: 8, android: 32}),
+    flex: 1,
+  },
+  contentContainer: {
+    padding: 8,
+  },
+  buttonContainer: {
+    paddingTop: 8,
+    margin: 8,
+  },
+  safeContainer: {
+    flex: 1,
+    backgroundColor: '#E8EAF6',
+  },
+  passwordAccessory: {
+    height: 18,
+    width: 18,
+    tintColor: 'gray',
+  },
+});
